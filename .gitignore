@@ -13,6 +13,7 @@ ios/poc.xcodeproj/project.xcworkspace/xcuserdata
 ios/Pods
 ios/poc.xcworkspace
 ios/poc.xcodeproj/xcshareddata
+ios/pocTests
 
 # testing
 /coverage
