@@ -5,6 +5,15 @@
 /.pnp
 .pnp.js
 
+# native
+ios/build
+ios/poc-*
+ios/**/xcschememanagement.plist
+ios/poc.xcodeproj/project.xcworkspace/xcuserdata
+ios/Pods
+ios/poc.xcworkspace
+ios/poc.xcodeproj/xcshareddata
+
 # testing
 /coverage
 
