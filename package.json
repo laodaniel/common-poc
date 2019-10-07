@@ -57,7 +57,10 @@
     "webpack.config.web.js"
   ],
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>/setup-tests.js"],
+    "preset": "react-native",
+    "setupFilesAfterEnv": [
+      "<rootDir>/setup-tests.js"
+    ],
     "transform": {
       "^.*.js(x)?$": "babel-jest"
     },
@@ -65,9 +68,17 @@
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
     ],
-    "transformIgnorePatterns": ["node_modules"],
+    "transformIgnorePatterns": [
+      "node_modules"
+    ],
     "moduleDirectories": [
       "node_modules"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
     ]
   }
 }

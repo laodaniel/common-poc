@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import Button from './Button.web';
+import Button from './Button.native';
 
 /* eslint-disable react/jsx-filename-extension */
 
