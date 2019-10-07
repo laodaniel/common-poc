@@ -7,12 +7,16 @@
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
+    "jest": "^24.9.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-native": "0.61.2",
@@ -24,7 +28,8 @@
     "start:web": "webpack-dev-server --config webpack.config.web.js",
     "build:web": "webpack --config webpack.config.web.js",
     "start:native": "react-native run-ios",
-    "lint": "eslint './**/*.{js,jsx}'"
+    "lint": "eslint './**/*.{js,jsx}'",
+    "test": "jest"
   },
   "browserslist": {
     "production": [
@@ -40,11 +45,29 @@
   },
   "eslintConfig": {
     "extends": "airbnb",
-    "parser": "babel-eslint"
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "jest": true
+    }
   },
   "eslintIgnore": [
     "coverage",
     "native",
     "webpack.config.web.js"
-  ]
+  ],
+  "jest": {
+    "setupFilesAfterEnv": ["<rootDir>/setup-tests.js"],
+    "transform": {
+      "^.*.js(x)?$": "babel-jest"
+    },
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "transformIgnorePatterns": ["node_modules"],
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  }
 }
