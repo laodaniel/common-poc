@@ -1,12 +1,10 @@
 import React from 'react';
 import Button from '../Button/Button.web';
+import ButtonClass from '../ButtonClass/Button.web';
 
-function App() {
-  return (
-    <main>
-      <Button />
-    </main>
-  );
-}
-
-export default App;
+export default () => (
+  <main>
+    <Button />
+    <ButtonClass />
+  </main>
+);

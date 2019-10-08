@@ -29,7 +29,7 @@
     "preinstall": "cd ios && pod install",
     "start:web": "webpack-dev-server --config webpack.config.web.js",
     "build:web": "webpack --config webpack.config.web.js",
-    "start:native": "react-native run-ios",
+    "start:native": "react-native run-ios --simulator='iPhone SE'",
     "lint": "eslint './**/*.{js,jsx}'",
     "test:web": "jest -c jest.config.web.js",
     "test:native": "jest -c jest.config.native.js",
