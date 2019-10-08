@@ -24,6 +24,7 @@
     "webpack-dev-server": "3.7.1"
   },
   "scripts": {
+    "preinstall": "cd ios && pod install",
     "start:web": "webpack-dev-server --config webpack.config.web.js",
     "build:web": "webpack --config webpack.config.web.js",
     "start:native": "react-native run-ios",
