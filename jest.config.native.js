@@ -1,8 +1,6 @@
 module.exports = {
   preset: 'react-native',
-  setupFilesAfterEnv: [
-    '<rootDir>/setup-tests.js',
-  ],
+  setupFiles: ['enzyme-react-16-adapter-setup'],
   testRegex: '\\.native\\.test\\.js$',
   transform: {
     '^.*.js(x)?$': '<rootDir>/test-transformer.native.js',

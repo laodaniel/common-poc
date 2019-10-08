@@ -10,7 +10,7 @@
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-react-16-adapter-setup": "^0.1.0",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
@@ -32,7 +32,8 @@
     "start:native": "react-native run-ios",
     "lint": "eslint './**/*.{js,jsx}'",
     "test:web": "jest -c jest.config.web.js",
-    "test:native": "jest -c jest.config.native.js"
+    "test:native": "jest -c jest.config.native.js",
+    "test": "yarn test:web && yarn test:native"
   },
   "browserslist": {
     "production": [
