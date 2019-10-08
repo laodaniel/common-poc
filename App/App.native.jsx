@@ -1,8 +1,6 @@
 import React from 'react';
-import { Text } from 'react-native';
+import Button from '../Button/Button.native';
 
-const App = () => {
-  return <Text>Native</Text>
-};
+const App = () => <Button />;
 
 export default App;
