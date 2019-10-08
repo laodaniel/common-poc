@@ -29,5 +29,10 @@ module.exports = {
   context: __dirname,
   target: "web",
   plugins: [
-  ]
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'public'),
+    hot: true,
+    historyApiFallback: true
+  },
 }
