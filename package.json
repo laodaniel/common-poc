@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.3",
@@ -16,6 +17,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
     "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.56.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-native": "0.61.2",
@@ -29,7 +31,8 @@
     "build:web": "webpack --config webpack.config.web.js",
     "start:native": "react-native run-ios",
     "lint": "eslint './**/*.{js,jsx}'",
-    "test": "jest"
+    "test:web": "jest -c jest.config.web.js",
+    "test:native": "jest -c jest.config.native.js"
   },
   "browserslist": {
     "production": [
@@ -55,15 +58,5 @@
     "coverage",
     "native",
     "webpack.config.web.js"
-  ],
-  "jest": {
-    "preset": "react-native",
-    "setupFilesAfterEnv": [
-      "<rootDir>/setup-tests.js"
-    ],
-    "transform": {
-      "^.*native.*.js(x)?$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
-      "^.*web.*.js(x)?$": "<rootDir>/test-transformer.web.js"
-    }
-  }
+  ]
 }
